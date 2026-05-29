@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <title>Pedido de Pizza</title>
+</head>
+
+<body>
+
+    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">Don Node</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                Formulario pedidos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Lista de pedidos
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <h1 class="text-center mt-4">Pedido de Pizza</h1>
+
+    
+    <div class="container mt-4">
+
+        <form action="/listaPedidos" method="post">
+
+            
+            <div class="mb-3">
+                <label for="nombreCliente" class="form-label">
+                    Nombre Cliente
+                </label>
+
+                <input type="text" class="form-control"
+                    name="nombreCliente"
+                    id="nombreCliente"
+                    required>
+            </div>
+
+            
+            <div class="mb-3">
+
+                <label for="tamano" class="form-label">
+                    Tamaño de Pizza
+                </label>
+
+                <select class="form-select" name="tamano" id="tamano">
+
+                    <option value="pequena">Pizza pequeña</option>
+                    <option value="mediana">Pizza mediana</option>
+                    <option value="grande">Pizza grande</option>
+
+                </select>
+            </div>
+
+            
+            <h5>Ingredientes a elegir</h5>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="jamon"
+                    id="jamon">
+
+                <label class="form-check-label" for="jamon">
+                    Jamón
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="queso_extra"
+                    id="quesoextra">
+
+                <label class="form-check-label" for="quesoextra">
+                    Queso extra
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="champinones"
+                    id="champinones">
+
+                <label class="form-check-label" for="champinones">
+                    Champiñones
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="aceitunas"
+                    id="aceitunas">
+
+                <label class="form-check-label" for="aceitunas">
+                    Aceitunas
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="cebolla"
+                    id="cebolla">
+
+                <label class="form-check-label" for="cebolla">
+                    Cebolla
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="pimenton"
+                    id="pimenton">
+
+                <label class="form-check-label" for="pimenton">
+                    Pimentón
+                </label>
+            </div>
+
+            <div class="form-check mb-4">
+                <input class="form-check-input"
+                    type="checkbox"
+                    name="ingredientes"
+                    value="tocino"
+                    id="tocino">
+
+                <label class="form-check-label" for="tocino">
+                    Tocino
+                </label>
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary">
+                Enviar Pedido
+            </button>
+
+        </form>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
